@@ -7,7 +7,6 @@
         <Nullable>enable</Nullable>
         <Title>DDD .NET 5 SeedWork</Title>
         <Authors>Johann Bączkiewicz</Authors>
-        <PackageLicenseUrl></PackageLicenseUrl>
         <RepositoryUrl>https://github.com/johannbaczkiewicz/SeedWork</RepositoryUrl>
         <PackageTags>ddd net5 seedwork</PackageTags>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
