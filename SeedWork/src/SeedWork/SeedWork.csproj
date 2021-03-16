@@ -5,6 +5,13 @@
         <AssemblyName>JBCode.SeedWork</AssemblyName>
         <RootNamespace>JBCode.SeedWork</RootNamespace>
         <Nullable>enable</Nullable>
+        <Title>DDD .NET 5 SeedWork</Title>
+        <Authors>Johann Bączkiewicz</Authors>
+        <PackageLicenseUrl>https://github.com/johannbaczkiewicz/SeedWork/blob/master/LICENSE</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/johannbaczkiewicz/SeedWork</RepositoryUrl>
+        <PackageTags>ddd net5 seedwork</PackageTags>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <PackageProjectUrl>https://github.com/johannbaczkiewicz/SeedWork</PackageProjectUrl>
     </PropertyGroup>
 
 </Project>
