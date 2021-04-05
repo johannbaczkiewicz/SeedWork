@@ -1,17 +1,16 @@
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 
 // ReSharper disable NonReadonlyMemberInGetHashCode
 
 namespace JBCode.SeedWork
 {
     public abstract class Entity<TIdentifier> : IDomainEventSupervisor
+        where TIdentifier : notnull
     {
         private readonly HashSet<IDomainEvent> _domainEvents = new();
 
         private int? _hashCode;
 
-        [NotNull]
         public TIdentifier Id { get; protected init; } = default!;
 
         public IReadOnlyCollection<IDomainEvent> DomainEvents
