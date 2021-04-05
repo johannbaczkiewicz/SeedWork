@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 // ReSharper disable NonReadonlyMemberInGetHashCode
 
@@ -10,6 +11,7 @@ namespace JBCode.SeedWork
 
         private int? _hashCode;
 
+        [NotNull]
         public TIdentifier Id { get; protected init; } = default!;
 
         public IReadOnlyCollection<IDomainEvent> DomainEvents
