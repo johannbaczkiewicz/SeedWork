@@ -14,7 +14,10 @@
         <PackageTags>ddd net5 seedwork</PackageTags>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <PackageProjectUrl>https://github.com/johannbaczkiewicz/SeedWork</PackageProjectUrl>
-        <PackageVersion>1.0.1</PackageVersion>
+        <PackageVersion>1.0.2</PackageVersion>
+        <PackageLicenseUrl>https://licenses.nuget.org/MIT</PackageLicenseUrl>
+        <AssemblyVersion>1.0.2</AssemblyVersion>
+        <FileVersion>1.0.2</FileVersion>
     </PropertyGroup>
 
 </Project>
