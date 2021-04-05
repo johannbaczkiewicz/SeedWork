@@ -7,16 +7,10 @@ namespace JBCode.SeedWork
         public DomainEvent()
         {
             Id = Guid.NewGuid();
-            Created = DateTimeOffset.UtcNow;
-            Timestamp = Created;
+            Timestamp = DateTimeOffset.UtcNow;
         }
 
         public Guid Id { get; }
-        public DateTimeOffset Created { get; }
-        public DateTimeOffset Timestamp { get; private set; }
-
-
-        public void OverwriteTimestampWithUtcNow()
-            => Timestamp = DateTimeOffset.UtcNow;
+        public DateTimeOffset Timestamp { get; }
     }
 }
