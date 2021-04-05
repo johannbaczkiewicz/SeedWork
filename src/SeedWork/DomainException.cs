@@ -1,29 +1,35 @@
 using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
 
 namespace JBCode.SeedWork
 {
     public class DomainException : Exception
     {
-        private readonly ConcurrentDictionary<string, object> _additionalData = new();
+        private const string UNSPECIFIED_RESOURCE_GROUP = "Unspecified";
 
-        public DomainException(string type, string message)
+        public DomainException(string resourceGroup,
+            string type,
+            string message)
             : base(message)
         {
+            ResourceGroup = resourceGroup;
             Type = type;
         }
 
-        public string Type { get; }
+        public DomainException(string type,
+            string message)
+            : base(message)
+        {
+            ResourceGroup = UNSPECIFIED_RESOURCE_GROUP;
+            Type = type;
+        }
 
-        public IDictionary<string, object> AdditionalData
-            => _additionalData;
+        public string ResourceGroup { get; }
+        public string Type { get; }
 
         public DomainException IncludeAdditionalData(string key, object value)
         {
-            _additionalData.AddOrUpdate(key,
-                value,
-                updateValueFactory: (_, _) => value);
+            if (!Data.Contains(key))
+                Data.Add(key, value);
 
             return this;
         }
