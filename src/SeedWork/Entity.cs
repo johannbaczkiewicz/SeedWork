@@ -5,6 +5,7 @@ using System.Collections.Generic;
 namespace JBCode.SeedWork
 {
     public abstract class Entity<TIdentifier> : IDomainEventSupervisor
+        where TIdentifier : notnull
     {
         private readonly HashSet<IDomainEvent> _domainEvents = new();
 
